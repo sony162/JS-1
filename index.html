@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS-1 Assignment</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+<body>
+
+<h1>Grade Calculator</h1>
+
+<input id="input" type="text" name="number" placeholder="enter">
+<button onclick="calculate()" class="btn">Calculate</button>
+
+<h2 class="output"></h2>
+
+
+<script type="text/javascript">
+	
+var val=document.getElementById('input');
+var output=document.querySelector('.output');
+val.value=Number(val.value);
+function calculate()
+{
+	if(val.value>=80 && val.value<=100) output.innerHTML="A+";
+	else if(val.value>=70 && val.value<=79) output.innerHTML="A";
+	else if(val.value>=60 && val.value<=69) output.innerHTML="A-";
+	else if(val.value>=50 && val.value<=59) output.innerHTML="B";
+	else if(val.value>=40 && val.value<=49) output.innerHTML="C";
+	else if(val.value>=33 && val.value<=39) output.innerHTML="D";
+	else if(val.value>=0 && val.value<=32) output.innerHTML="F";
+	else output.innerHTML="Invalid Input";
+	
+}
+</script>
+</body>
+</html>

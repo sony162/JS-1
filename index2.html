@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS-1 Assignment</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+
+</head>
+<body>
+
+<h3>Starting Range</h3>
+<input type="text" name="name" placeholder="Start" class="start">
+
+<h3>Ending Range</h3>
+<input type="text" name="name" placeholder="End" class="end">
+<button onclick="doNow()">Calculate</button>
+
+<h1 id="res"></h1>
+
+	<script>
+		var start=document.querySelector('.start');
+var end=document.querySelector('.end');
+
+var res=document.getElementById('res');
+function doNow()
+{
+	res.innerHTML="";
+	for(var i=Number(start.value); i<=Number(end.value);i++)
+	{
+	
+	if(i%2==0) res.innerHTML=res.innerHTML+" "+i;
+	
+	}
+}
+	</script>
+</body>
+</html>
